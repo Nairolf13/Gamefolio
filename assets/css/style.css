@@ -1,0 +1,947 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: HelpMe;
+    src: url(/assets/font/HelpMe.ttf);
+}
+@font-face {
+    font-family: Plane Crash;
+    src: url(/assets/font/Plane\ Crash.ttf);
+}
+
+@font-face {
+    font-family: augusta;
+    src: url(/assets/font/Augusta.ttf);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+#gameContainer {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#backgroundPage1 {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.collision-block {
+    position: absolute;
+}
+
+#rock-title {
+    font-family: Plane Crash;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    text-align: center;
+    position: absolute;
+    top: 13%;
+    right: 43%;
+    color: #ffffff;
+    text-shadow:
+        -1px -1px 0 #312e2c,
+        1px -1px 0 #b9b9b8,
+        -1px 1px 0 #8a8989,
+        1px 1px 0 #645f5b,
+        2px 2px 3px rgba(0, 0, 0, 0.5);
+    letter-spacing: 4px;
+
+}
+
+.gif {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#gifFive {
+    position: fixed;
+    top: 36.5%;
+    left: 18.8%;
+    z-index: 1000;
+    width: 100%;
+}
+
+#gifPendu {
+    height: 120px;
+}
+
+#panneaususpendu {
+    position: absolute;
+    top: 25%; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000; 
+    transform-style: preserve-3d; 
+    animation: depthEffect 5s infinite; 
+}
+
+#panneaususpenduone{
+    position: absolute;
+    top: 25%; 
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+    transform-style: preserve-3d; 
+    animation: depthEffect 5s infinite; 
+}
+
+#panneaususpendutwo {
+    position: absolute;
+    top: 25%; 
+    left: 80%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000; 
+    transform-style: preserve-3d; 
+    animation: depthEffect 5s infinite; 
+}
+
+#panneaususpendu img,#panneaususpenduone img,#panneaususpendutwo img{
+    width: 11vw;; 
+    height: auto;
+}
+
+#panneaususpendu span {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size:1em;
+    text-shadow: 1px 1px 2px black; 
+    font-family: HelpMe;
+    letter-spacing: 5px;
+}
+
+#panneaususpenduone span {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 1em;
+    text-shadow: 1px 1px 2px black; 
+    font-family: HelpMe;
+    letter-spacing: 5px;
+}
+
+#panneaususpendutwo span {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 1em;
+    text-shadow: 1px 1px 2px black; 
+    font-family: HelpMe;
+    letter-spacing: 5px;
+}
+
+@keyframes depthEffect {
+    0% {
+        transform: translateX(-50%) rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: translateX(-50%) rotateX(10deg) rotateY(10deg);
+    }
+    50% {
+        transform: translateX(-50%) rotateX(0deg) rotateY(0deg);
+    }
+    75% {
+        transform: translateX(-50%) rotateX(-10deg) rotateY(-10deg);
+    }
+    100% {
+        transform: translateX(-50%) rotateX(0deg) rotateY(0deg);
+    }
+}
+
+#gifPageone {
+    width: 10vw;
+    max-width: 100px;
+    min-width: 50px;
+    height: auto;
+    position: absolute;
+    animation: flyAcross 15s linear infinite;
+}
+
+#gif {
+    position: fixed;
+    bottom: 70px;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#gifRat {
+    width: 5vw;
+    max-width: 880px;
+    min-width: 50px;
+    height: auto;
+    position: absolute;
+    animation: flyAcross1 40s linear infinite;
+}
+
+@keyframes flyAcross1 {
+    0% {
+        left: 100%;
+        transform: scaleX(-1);
+    }
+
+    45% {
+        left: -10vw;
+        transform: scaleX(-1);
+    }
+
+    50% {
+        left: -10vw;
+        transform: scaleX(1);
+    }
+
+    95% {
+        left: 100%;
+        transform: scaleX(1);
+    }
+
+    100% {
+        left: 100%;
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes flyAcross {
+    0% {
+        left: 100%;
+        transform: scaleX(1);
+    }
+
+    45% {
+        left: -10vw;
+        transform: scaleX(1);
+    }
+
+    50% {
+        left: -10vw;
+        transform: scaleX(-1);
+    }
+
+    95% {
+        left: 100%;
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: 100%;
+        transform: scaleX(1);
+    }
+}
+
+.torche-container {
+    position: fixed;
+    top: 45%;
+    left: 35.9%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#torche2 {
+    position: fixed;
+    top: 45%;
+    right: 22%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+}
+
+.torche {
+    width: 12vw;
+    height: 35vh
+}
+
+#Cadre {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    padding: 5%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    z-index: 1;
+
+}
+
+
+
+@keyframes fallDown {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+.falling {
+    animation: fallDown 2s ease-in forwards;
+    pointer-events: none;
+}
+
+#Cadre img {
+
+    width: 13vw;
+    height: 16vh;
+
+}
+
+#backgroundPage2 {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+#backgroundPage3 {
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.door {
+    position: relative;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden; 
+}
+
+.door span {
+    color: white; 
+    font-size: 1.5em; 
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease; 
+    z-index: 10; 
+    
+}
+
+.door:hover span {
+    transform: scale(1.1);
+}
+
+.arrows-container {
+    position: absolute;
+    bottom: 13%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap:27%;
+    width: 100%;
+}
+
+.arrows-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-up {
+    width: 50px;
+    height: 50px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 4px;
+    transform: rotate(135deg)  
+}
+
+.arrow-up:first-child{
+    animation: 1s blink .2s infinite;
+}
+.arrow-up:nth-child(2){
+    animation: 1s blink .1s infinite;
+}
+.arrow-up:last-child{
+    animation: 1s blink 0s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#door-area {
+    position: absolute;
+    top: 15%;
+    left: 47.5%;
+    width: 100px;
+    height: 100px;
+}
+
+#door-area-two {
+    position: absolute;
+    top: 15%;
+    left: 17.5%;
+    width: 100px;
+    height: 100px;
+}
+
+#door-area-three {
+    position: absolute;
+    top: 15%;
+    right: 17%;
+    width: 100px;
+    height: 100px;
+}
+
+#backgroundContact {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+#character {
+
+    position: absolute;
+    width: 48px;
+    height: 48px; 
+    background-image: url(/assets/imgs/perso1-spritesheet.png);
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    transform: scale(4);
+    transform-origin: bottom center;
+    transition: transform 0.2s ease; 
+}
+
+.character-shrink {
+    transform: scale(3) !important;
+    
+}
+
+@keyframes swinging {
+    100% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    0% {
+        transform: rotate(0deg);
+    }
+}
+
+#panneauContactLeft {
+    position: absolute;
+    top: 54%;
+    left: 15%;
+    width: 150px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom center;
+    animation: swinging 2s ease-in-out infinite;
+}
+
+#panneauleftPageOne {
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+}
+
+#panneauCompetenceright {
+    position: absolute;
+    top: 53%;
+    right: 15%;
+    width: 150px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom center;
+    animation: swinging 2s ease-in-out infinite;
+}
+
+#panneaurightPageOne {
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+}
+
+#panneauleftPagetwo {
+    position: absolute;
+    top: 64%;
+    left: 5.5%;
+    width: 10vw;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomPulse 2s infinite ease-in-out;
+}
+
+#panneauRightPagetwo {
+    position: absolute;
+    top: 64%;
+    left:94.5%;
+    width: 10vw;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomPulse 2s infinite ease-in-out;
+}
+
+.contact-textOne, .contact-textTwo {
+    position: absolute;
+    top: 64.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 0.9em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+    animation: zoomPulse 2s infinite ease-in-out;
+}
+
+.contact-textOne {
+    left: 6%;
+}
+
+.contact-textTwo {
+    left: 94%;
+}
+
+@keyframes zoomPulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+#parcheminLeft,
+#parcheminRight {
+    position: absolute;
+    width: 300px;
+    height: 410px;
+}
+
+#parcheminLeft {
+    top: 15%;
+    left: 4%;
+}
+
+#parcheminRight {
+    top: 15%;
+    right: 3.5%;
+}
+
+#parcheminLeft img,
+#parcheminRight img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contact  {
+    position: absolute;
+    left: 51%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    color: #0c0c0c;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    width: 80%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.adresse {
+    position: absolute;
+    left: 51%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    color: #0c0c0c;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    width: 80%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/assets/imgs/parchemin.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.contact-text {
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 1.3em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+}
+
+#modal {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 650px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    top: -80%;
+    left: 12px;
+    display: none;
+}
+
+#modal::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 37px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ffffff;
+}
+
+#text-display {
+    font-family: augusta;
+    font-size: 25px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+@keyframes fadeToBlack {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes fadeFromBlack {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+#socialLeft {
+    position: absolute;
+    top: 44%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 460px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#socialRight {
+    position: absolute;
+    top: 44%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 460px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#socialContainer nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#socialContainer nav ul li a {
+    text-decoration: none;
+    font-size: 40px;
+    color: #000;
+}
+
+#socialContainer nav ul li a:hover {
+    color: #0073e6;
+}
+
+#github {
+    position: relative;
+    bottom: 51%;
+    left: 42%;
+}
+
+.github-icon i {
+    font-size: 50px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.github-icon:hover i {
+    color: #0366d6;
+}
+
+#Cv{
+    position: relative;
+    color: black;
+    bottom: 42%;
+    left: 29%;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+    #panneaususpendu span, #panneaususpenduone span ,#panneaususpendutwo span{
+      font-size: 0.7em;
+    }
+
+    .contact-textOne, .contact-textTwo {
+        font-size: 0.7;
+  }}
+
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
+    #panneaususpendu span, #panneaususpenduone span ,#panneaususpendutwo span{
+      font-size: 0.4em;
+    }
+
+    .contact-textOne, .contact-textTwo {
+        font-size: 0.5em;
+  }}
+
+
+
+  @media screen and (max-width: 600px) {
+    #rock-title {
+        font-size: 3vw; /* Ajuste la taille du titre */
+        top: 18.5%;
+        right: 40%;
+    }
+
+    .gif,
+    #gifFive,
+    #gifPendu {
+        width: 100%; /* Maintient la proportion des GIFs */
+        height: auto;
+    }
+
+    #panneauCompetenceright {
+        top: 65%;
+        right: 5%;
+        height: 190px;
+    }
+
+    #panneauContactLeft{
+        top: 65%;
+        left: 10%;
+        height: 190px;
+    }
+
+    #modal::before {
+        display: none;
+    }
+
+    #panneaususpendu img,
+    #panneaususpenduone img,
+    #panneaususpendutwo img {
+        width: 5vw; /* Réduit les panneaux suspendus */
+    }
+
+    #panneaususpendu span,
+    #panneaususpenduone span,
+    #panneaususpendutwo span {
+        font-size: 0.4em; /* Ajuste le texte sur les panneaux */
+    }
+
+    #gifPageone {
+        margin-top: 60px;
+        width: 10vw; /* Réduction de la taille du GIF */
+        max-width: 100px;
+        min-width: 25px;
+    }
+
+    #gifRat {
+        width: 20vw; /* Réduction de la taille du GIF du rat */
+        max-width: 50px;
+        min-width: 25px;
+    }
+
+    .torche-container,
+    #torche2 {
+        width: 6vw; /* Réduction de la taille des torches */
+        height: 17vh;
+    }
+
+    #Cadre {
+        gap: 10px; /* Réduit les écarts entre les cadres */
+        padding: 2%;
+        top: 30%;
+    }
+
+    #Cadre img {
+        
+        width: 15vw; /* Taille des images */
+        height: 8vh;
+    }
+
+    #door-area,
+    #door-area-two,
+    #door-area-three {
+        width: 50px; /* Ajuste les zones de porte */
+        height: 50px;
+    }
+
+   
+
+    .door span {
+        font-size: 0.8em; /* Ajustement du texte des portes */
+    }
+
+    .arrows-container {
+        gap: 10%; /* Ajustement des flèches */
+    }
+
+    .arrow-up {
+        width: 25px;
+        height: 25px;
+    }
+
+    #panneauleftPagetwo,
+    #panneauRightPagetwo {
+        width: 14vw; /* Ajuste les panneaux de contact */
+        height: 10vh;
+    }
+
+    .contact-textOne,
+    .contact-textTwo {
+        font-size: 0.4em;
+    }
+
+    #parcheminLeft,
+    #parcheminRight {
+        width: 150px; /* Taille réduite pour parchemins */
+        height: 200px;
+    }
+
+    .contact,
+    .adresse {
+        font-size: 0.35em; /* Ajustement du texte de contact */
+    }
+
+    #modal {
+        max-width: 300px; /* Réduction de la largeur du modal */
+    }
+
+    #text-display {
+        font-size: 15px; /* Taille du texte dans le modal */
+    }
+
+    #socialLeft,
+    #socialRight {
+        gap: 150px; /* Ajustement de l'espacement social */
+    }
+
+    #github {
+        left: 40%;
+        bottom: 40%; /* Position ajustée de l'icône GitHub */
+    }
+
+    .github-icon i {
+        font-size: 30px; /* Taille réduite de l'icône GitHub */
+    }
+
+    #Cv {
+        bottom: 30%; /* Ajustement du CV */
+        left: 25%;
+    }
+
+  }

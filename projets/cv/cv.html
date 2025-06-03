@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Bricchi Florian</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .cv-container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            min-height: 100vh;
+        }
+
+        /* Sidebar gauche */
+        .sidebar {
+            background: #4a5568;
+            color: white;
+            width: 300px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #ccc;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 4px solid white;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar h2 {
+            color: white;
+            font-size: 1.2rem;
+            margin: 25px 0 15px 0;
+            border-bottom: 2px solid #718096;
+            padding-bottom: 5px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .sidebar .contact-info {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .contact-info p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+
+        .sidebar .contact-info a {
+            color: #cbd5e0;
+            text-decoration: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            width: 100%;
+        }
+
+        .sidebar li {
+            margin: 8px 0;
+            font-size: 0.9rem;
+            padding: 5px 0;
+        }
+
+        .sidebar .apprentissage {
+            background: #2d3748;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Contenu principal */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .header-main {
+            margin-bottom: 30px;
+        }
+
+        .header-main h1 {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .header-main .subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #4a5568;
+            padding-bottom: 5px;
+        }
+
+        .about-text {
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .hackathon {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .hackathon a {
+            color: #4a5568;
+            text-decoration: none;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f7fafc;
+            border-left: 4px solid #4a5568;
+        }
+
+        .experience-item .date {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .experience-item h4 {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        .experience-item .tech {
+            font-style: italic;
+            color: #718096;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f7fafc;
+            border-left: 4px solid #4a5568;
+        }
+
+        .education-item .year {
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        .education-item .degree {
+            color: #4a5568;
+            margin: 5px 0;
+        }
+
+        .education-item .school {
+            color: #718096;
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+                margin: 10px;
+            }
+            
+            .sidebar {
+                width: 100%;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv-container">
+        <!-- Sidebar gauche -->
+        <div class="sidebar">
+            <div class="profile-photo">
+                <img src="../../assets/imgs/photoProfil.png" alt="Photo de profil Bricchi Florian">
+            </div>
+            
+            <div class="apprentissage">
+                Éligible à la prime d'apprentissage
+            </div>
+
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>bricchi.florian@outlook.com</p>
+                <p>19 chemin de la gélatine<br>13400 Aubagne</p>
+                <p>0647486734</p>
+                <p><a href="https://github.com/Nairolf13" target="_blank">https://github.com/Nairolf13</a></p>
+                <p><a href="https://pulseconnect.duckdns.org" target="_blank">https://pulseconnect.duckdns.org</a></p>
+            </div>
+
+            <h2>Compétences</h2>
+            <ul>
+                <li>Développement Frontend & Backend</li>
+                <li>Résolution de problèmes</li>
+                <li>Collaboration et travail d'équipe</li>
+            </ul>
+
+            <h2>Technologies</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript, React, PHP,</li>
+                <li>Figma, SQL, GIT, MySQL, Symfony,</li>
+                <li>Docker, Prisma, NodeJS, Express,</li>
+                <li>Twig</li>
+            </ul>
+
+            <h2>Langue</h2>
+            <ul>
+                <li>Français</li>
+                <li>Anglais</li>
+            </ul>
+
+            <h2>Loisirs</h2>
+            <ul>
+                <li>Padel</li>
+                <li>Chasse sous-marine</li>
+                <li>Tir sportif</li>
+            </ul>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="main-content">
+            <div class="header-main">
+                <h1>Bricchi Florian</h1>
+                <div class="subtitle">Développeur web<br>et web mobile</div>
+            </div>
+
+            <div class="section">
+                <p class="about-text">
+                    Ancien maçon en reconversion, je mets à profit mon expérience en gestion de 
+                    projet et en coordination d'équipes pour développer des solutions 
+                    numériques adaptées aux besoins des clients. Rigoureux et organisé, je me 
+                    distingue par ma capacité à gérer les imprévus et à créer des solutions de 
+                    qualité.
+                </p>
+                <p class="hackathon">
+                    Finaliste du hackathon CodeForSud 2024 
+                    <a href="https://ia4sud.fr/#teams" target="_blank">https://ia4sud.fr/#teams</a>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="date">Projets personnel – 2025</div>
+                    <h4>Absento</h4>
+                    <p>
+                        Développement d'une application web dédiée à la gestion des 
+                        absences des employés. L'outil permet d'ajouter, modifier et supprimer des 
+                        employés, de déclarer des absences, et d'automatiser les propositions de 
+                        remplaçants selon les disponibilités. Il inclut également un système de gestion des tâches liées aux absences et 
+                        aux remplacements.
+                    </p>
+                    <p class="tech">Technologies utilisées : React, Node.js, Tailwind, Express, Prisma, MySQL</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="date">Projets personnel – 2024</div>
+                    <h4>PULSE CONNECT</h4>
+                    <p>
+                        Création d'une plateforme collaborative dédiée aux professionnels de la musique.
+                        Projet réalisé avec HTML, CSS, JavaScript, Twig, Express.js, Node.js, Prisma.
+                        Développement d'un espace de collaboration avec gestion des comptes et 
+                        publications.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="date">Projets réalisés en formation – 2024</div>
+                    <h4>Réseau Social</h4>
+                    <p>
+                        Création d'un réseau social personnalisé.
+                        Projet réalisé avec PHP, MySQL.
+                        Fonctionnalités : Création, modification, suppression de comptes et de post, 
+                        système de like.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="date">API de Recettes de Cuisine – 2024</div>
+                    <p>
+                        Développement d'une API REST.
+                        Projet réalisé avec Node.js, Express.js, Mongoose.
+                        Création d'une API pour gérer une base de données de recettes (CRUD).
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="date">Site de Gestion de Classes – 2024</div>
+                    <p>
+                        Interface de gestion scolaire.
+                        Projet réalisé avec JavaScript.
+                        Utilisation d'une API externe pour gérer les classes (ajout, modification, 
+                        suppression).
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="date">Application RH – 2024</div>
+                    <p>
+                        Outil de gestion des ressources humaines.
+                        Projet réalisé avec JS, Twig, Express.js.
+                        Gestion des entreprises, employés, postes de travail et tâches assignées.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <div class="year">Développeur Web et Web Mobile BAC +2</div>
+                    <div class="school">École Supérieure du Numérique Ri7</div>
+                    <div class="school">Année d'obtention : 2024</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="year">Maçonnerie BAC PRO</div>
+                    <div class="school">CFA du Bâtiment de Marseille</div>
+                    <div class="school">Année d'obtention : 2011</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="year">Maçonnerie CAP</div>
+                    <div class="school">CFA du Bâtiment</div>
+                    <div class="school">Année d'obtention : 2009</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+/* Importation de la police d'écriture craie */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+/* Style global */
+body {
+    flex-direction: column;
+    font-family: 'Shadows Into Light', cursive;
+    background: #3b3b3b; /* Fond tableau noir */
+    color: #ecf0f1; /* Texte clair */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background: #2c3e50; /* Fond sombre pour le conteneur */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 600px; /* Taille du conteneur ajustée */
+    text-align: center;
+    position: relative;
+    border: 5px solid #fff; /* Bordure blanche pour l'effet tableau */
+}
+
+h1 { 
+    font-size: 32px;
+    color: #ffffff; /* Couleur blanche pour le texte */
+    margin-bottom: 25px;
+}
+
+/* Bouton Jouer */
+.btn-play {
+    background: #e74c3c; /* Rouge vif */
+    color: #fff;
+    padding: 15px 30px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 20px;
+}
+
+.btn-play:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Lettres disponibles */
+.possibility {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.possibility .letter {
+    background: #1abc9c; /* Vert clair */
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.possibility .letter:hover {
+    background: #16a085;
+    transform: scale(1.1);
+}
+
+/* Mot à deviner */
+.findWord {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 20px 0;
+    padding: 10px;
+    background: #2c3e50; /* Fond assorti */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    letter-spacing: 10px; /* Espacement des lettres */
+}
+
+/* Nombre de tours */
+.tryNumber {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 15px 0;
+    padding: 15px;
+    background: #2c3e50; /* Fond assorti */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+/* Lettres utilisées */
+.letterUse {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 15px 0;
+    padding: 15px;
+    background: #2c3e50; /* Fond assorti */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+#pendu1 {
+    width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Résultats */
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #e74c3c;
+}
+
+/* Transitions */
+#container, .btn-play, .possibility .letter {
+    transition: all 0.3s ease;
+}
