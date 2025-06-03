@@ -1,0 +1,122 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex: 1;color: rgb(0, 0, 0);    
+}
+
+#gamecontainer {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/assets/imgs/vaisseau-spatial-brillant-orbite-autour-planete-dans-galaxie-etoilee-generee-par-ia_188544-9655.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cell {
+    flex: 1;
+    text-align: center;
+    width: 10%;
+    height: 10%    ;
+}
+
+img {
+    width: 20%;
+}
+
+.score {
+    position:absolute;
+    color: white;
+}
+
+#scoreContainer {
+    font-size: 25px;
+    top: 0;
+    left: 10px
+}
+
+#presentation {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+#scoreContainer {
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    
+}
+
+h1 {
+    font-size: 200px;
+}
+
+#presentation p {
+    margin-top: 200px;
+}
+
+#play {
+    display: flex;
+    text-align: center;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3em 0.5em rgb(255, 255, 255);
+    height: 100px;
+    width: 200px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#gameOver{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    top:50%;
+    color: white
+}
+#gameOver p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 200px;
+    justify-content: center;
+}
+#win{
+    color: white;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    top:50%;
+}
+#win p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 200px;
+    justify-content: center;
+}
+
+#replay {
+    color: white;
+    background-color: black;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow:0px 0px 3em 0.5em rgb(255, 255, 255);
+    height: 100px;
+    width: 200px;
+    font-size: 50px;
+
+}
+
+.area{
+    height: 90%;
+}

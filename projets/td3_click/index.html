@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/imgs/pinte-de-biere.png" type="pinte-de-biere">
+    <title>ClickBarney</title>
+</head>
+<body>
+    <header>
+        <h1>Barney</h1>
+        <p id="timer">TIME : </p>
+        <p id="score">SCORE : </p>
+        <p id="level">LEVEL :</p>
+        <img id="sound" onclick="playMusic()" src="./assets/imgs/icons8-haut-parleur-64.png" alt="logo haut parleur">
+        <audio id="music" src="./assets/sounds/simpsons_intro.mp3" autoplay="false"></audio>
+    </header>
+    <main>
+        <div id="gamecontainer">
+            <img id="barney" onclick="soundStart('roter')" src="./assets/imgs/baneypng.png" onmousedown="return false" alt="image de barney">
+            <audio id="roter" src="./assets/sounds/roh.mp3"></audio>
+            <img id="homer" class="hidden" onclick="soundStart('dow')" src="./assets/imgs/homer.png" onmousedown="return false" alt="image d'homer">
+            <audio id="dow" src="./assets/sounds/doh3.wav"></audio>
+            <img id="nelson" class="hidden" onclick="soundStart('ahah')" src="./assets/imgs/nelson.png" onmousedown="return false" alt="image de nelson">
+            <audio id="ahah" src="./assets/sounds/nelson_ahaha.mp3"></audio>
+            <div id="startContainer" class="flexp">
+                <p id="start" onclick="playAll()">START</p>
+            </div>
+            <div>
+                <p id="result"></p>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

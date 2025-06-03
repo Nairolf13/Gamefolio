@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Space inv</title>
+</head>
+
+<body>
+    <div class="welcome" id="presentation">
+        <h1>Space Invader</h1>
+        <button id="play" onclick="startGame()">Jouer</button>
+        <p>Commande :<br> Droite  ⍈  gauche  ⍇ tir : space </p>
+    </div>
+    <section class="area"> 
+        
+        <main id="gamecontainer">
+        </main>
+        <div id="scoreContainer">
+        </div> 
+        <div id="win" > 
+            <p>You win</p>
+            <button id="replay" onclick="startGame()"  >Replay</button>
+        </div>
+        <div id="gameOver">
+            <p>Game over</p>
+            <button id="replay" onclick="startGame()"  >Replay</button>
+        </div>
+    </section>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
