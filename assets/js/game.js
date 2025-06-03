@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Bonne visite et à bientôt !"
     ];
     
-    const pages = ["index.html", "pages/page2.html", "pages/page3.html", "pages/contact.html"];
+    // Utilise le tableau pages global si défini (pour navigation relative sur chaque page)
+    const pages = window.pages || ["index.html", "pages/page2.html", "pages/page3.html", "pages/contact.html"];
     const cadres = document.querySelectorAll('#Cadre img');
     const doors = document.querySelectorAll('.door');
     const shrinkDistance = 510;
