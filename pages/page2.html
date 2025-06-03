@@ -44,6 +44,14 @@
         window.pages = pages;
         </script>
         <script src="../assets/js/game.js"></script>
+        <!-- Correction navigation : forcer le chemin relatif pour page3.html -->
+        <script>
+        // Patch navigation droite depuis page2.html
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.location.pathname.endsWith('page2.html')) {
+                window.pages = ["../index.html", "page2.html", "page3.html", "contact.html"];
+            }
+        });
+        </script>
     </body>
-    
-    </html>
+</html>
